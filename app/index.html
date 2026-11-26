@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NusaData — Statistik Indonesia | Penduduk, Ekonomi, Kesehatan, Pendidikan, Wilayah</title>
+<meta name="description" content="Portal statistik Indonesia: penduduk 281,6 juta, PDB Rp22.139 triliun, inflasi 1,57%, IPM 75,02 — semua angka dari BPS, Bank Indonesia, dan publikasi resmi.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a4a40'/%3E%3Ctext x='32' y='44' font-family='Arial' font-size='36' font-weight='bold' fill='%23f2c14e' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#/beranda"><span class="brand-mark">NUSA<em>DATA</em></span><span class="brand-sub">Statistik Indonesia</span></a>
+    <nav class="main-nav" aria-label="Bagian situs">
+      <a class="nav-link" data-route="beranda" href="#/beranda">Beranda</a>
+      <a class="nav-link" data-route="penduduk" href="#/penduduk">Penduduk</a>
+      <a class="nav-link" data-route="ekonomi" href="#/ekonomi">Ekonomi</a>
+      <a class="nav-link" data-route="kesehatan" href="#/kesehatan">Kesehatan</a>
+      <a class="nav-link" data-route="pendidikan" href="#/pendidikan">Pendidikan</a>
+      <a class="nav-link" data-route="wilayah" href="#/wilayah">Wilayah</a>
+      <a class="nav-link" data-route="metodologi" href="#/metodologi">Metodologi</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+
+  <!-- ============ BERANDA ============ -->
+  <section class="page-section" id="section-beranda">
+    <div class="hero">
+      <p class="eyebrow">Portal data nasional &middot; diperbarui 26 November 2026</p>
+      <h1>Indonesia dalam angka</h1>
+      <p class="lede">Penduduk, ekonomi, kesehatan, pendidikan, dan wilayah — diringkas dari publikasi resmi Badan Pusat Statistik, Bank Indonesia, dan kementerian, dengan sumber dan tahun di setiap angka.</p>
+      <div class="kpi-grid" id="kpi-grid"></div>
+      <p class="src">Angka dasar tahun 2024. Klik kartu untuk membuka bagiannya.</p>
+    </div>
+
+    <div class="grid-2" style="margin-top:16px">
+      <div class="card">
+        <h3>Penduduk terus tumbuh</h3>
+        <p>281,6 juta jiwa pada pertengahan 2024 — naik 1,04% dari 2023. <span class="src">BPS, 2024.</span></p>
+        <div class="chart-wrap" id="chart-population"></div>
+        <p><a href="#/penduduk">Lihat bagian Penduduk &rsaquo;</a></p>
+      </div>
+      <div class="card">
+        <h3>Sorotan terbaru 2025</h3>
+        <p>Angka resmi terbaru yang sudah dirilis saat situs ini dibuat.</p>
+        <ul class="updates" id="updates-list"></ul>
+        <p><a href="#/metodologi">Dari mana angka-angka ini? &rsaquo;</a></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Lima provinsi terpadat</h3>
+      <p>Tiga provinsi di Pulau Jawa menampung hampir separuh penduduk Indonesia. <span class="src">BPS, 2024.</span></p>
+      <div class="chart-wrap" id="chart-provinces"></div>
+      <p><a href="#/wilayah">Buka tabel wilayah lengkap — bisa dicari, difilter, dan diurutkan &rsaquo;</a></p>
+    </div>
+  </section>
+
+  <!-- ============ PENDUDUK ============ -->
+  <section class="page-section" id="section-penduduk" hidden>
+    <p class="eyebrow">Penduduk</p>
+    <h2>281,6 juta jiwa — negara keempat terpadat di dunia</h2>
+    <p class="lede">Jumlah penduduk Indonesia naik setiap tahun, dari 270,20 juta pada Sensus 2020 menjadi 281,60 juta pada pertengahan 2024. Laju pertumbuhan 2024 tercatat 1,04% per tahun.</p>
+    <div class="stat-row">
+      <div class="stat"><b>281,60 jt</b><span>Penduduk pertengahan 2024</span><span class="src">BPS, 2024</span></div>
+      <div class="stat"><b>+1,04%</b><span>Laju pertumbuhan 2024</span><span class="src">BPS, 2024</span></div>
+      <div class="stat"><b>55,93%</b><span>Penduduk tinggal di Pulau Jawa</span><span class="src">Dukcapil, Semester I 2024</span></div>
+    </div>
+    <div class="card">
+      <h3>Tren penduduk 2020–2024</h3>
+      <p>Dalam lima tahun, penduduk bertambah 11,4 juta jiwa. <span class="src">BPS.</span></p>
+      <div class="chart-wrap" id="chart-population-dup"></div>
+    </div>
+    <div class="card">
+      <h3>Lima provinsi terpadat</h3>
+      <p>Jawa Barat sendiri berpenduduk 50,35 juta jiwa — hampir seperlima penduduk nasional. <span class="src">BPS, 2024.</span></p>
+      <div class="chart-wrap" id="chart-provinces-dup"></div>
+      <p><a href="#/wilayah">Lihat tabel 10 provinsi terpadat &rsaquo;</a></p>
+    </div>
+    <div class="note"><strong>Yang perlu diketahui:</strong> persebaran penduduk sangat timpang — Jawa menampung 55,93% penduduk di sekitar 7% luas daratan, sementara provinsi terkecil, Papua Selatan, berpenduduk sekitar 546 ribu jiwa (Dukcapil, Semester I 2024).</div>
+  </section>
+
+  <!-- ============ EKONOMI ============ -->
+  <section class="page-section" id="section-ekonomi" hidden>
+    <p class="eyebrow">Ekonomi</p>
+    <h2>Ekonomi tumbuh 5,03% pada 2024</h2>
+    <p class="lede">PDB atas dasar harga berlaku mencapai Rp22.139 triliun, dengan PDB per kapita Rp78,6 juta (US$4.960,3). Inflasi 1,57% — terendah sepanjang sejarah pencatatan BPS.</p>
+    <div class="stat-row">
+      <div class="stat"><b>Rp22.139 T</b><span>PDB harga berlaku 2024</span><span class="src">BPS, 2024</span></div>
+      <div class="stat"><b>Rp78,6 jt</b><span>PDB per kapita 2024 (US$4.960,3)</span><span class="src">BPS, 2024</span></div>
+      <div class="stat"><b>1,57%</b><span>Inflasi yoy Desember 2024</span><span class="src">BPS, 2 Jan 2025</span></div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Pertumbuhan ekonomi 2020–2024</h3>
+        <p>Kontraksi pandemi 2020, lalu pulih dan stabil di kisaran 5%. <span class="src">BPS.</span></p>
+        <div class="chart-wrap" id="chart-gdp"></div>
+      </div>
+      <div class="card">
+        <h3>Perdagangan luar negeri 2024</h3>
+        <p>Ekspor <strong>US$264,70 miliar</strong> (+2,29%), impor <strong>US$233,66 miliar</strong> (+5,31%), surplus <strong>US$31,04 miliar</strong>. <span class="src">BPS via PDSI Kemendag, 2024.</span></p>
+        <p>Cadangan devisa akhir Desember 2024 mencapai <strong>US$155,7 miliar</strong> — rekor tertinggi, setara 6,7 bulan impor. <span class="src">Bank Indonesia, 8 Jan 2025.</span></p>
+        <p>Angkatan kerja Agustus 2024: <strong>152,11 juta orang</strong>; bekerja 144,64 juta; penganggur 7,47 juta (TPT 4,91%, di bawah level pra-pandemi 5,23%). <span class="src">BPS Sakernas, Agt 2024.</span></p>
+      </div>
+    </div>
+    <div class="note"><strong>Pembaruan 2025:</strong> ekonomi 2025 tumbuh 5,11% dengan PDB Rp23.821,1 triliun dan PDB per kapita Rp83,7 juta (US$5.083,4). <span class="src">BPS, rilis 5 Feb 2026.</span></div>
+  </section>
+
+  <!-- ============ KESEHATAN ============ -->
+  <section class="page-section" id="section-kesehatan" hidden>
+    <p class="eyebrow">Kesehatan</p>
+    <h2>Harapan hidup 74,15 tahun</h2>
+    <p class="lede">Bayi yang lahir pada 2024 diperkirakan hidup rata-rata 74,15 tahun — naik 0,22 tahun dari 2023. Indeks Pembangunan Manusia (IPM) mencapai 75,02, kategori tinggi.</p>
+    <div class="stat-row">
+      <div class="stat"><b>74,15 thn</b><span>Umur harapan hidup saat lahir, 2024</span><span class="src">BPS, 2024</span></div>
+      <div class="stat"><b>75,02</b><span>IPM Indonesia 2024 (kategori tinggi)</span><span class="src">BPS, 2024</span></div>
+      <div class="stat"><b>84,15</b><span>IPM tertinggi: DKI Jakarta, 2024</span><span class="src">BPS, 2024</span></div>
+    </div>
+    <div class="card">
+      <h3>IPM naik lima tahun berturut-turut</h3>
+      <p>Dari 72,81 (2020) ke 75,02 (2024). Seluruh dimensi pembentuk IPM naik, terutama standar hidup layak. <span class="src">BPS.</span></p>
+      <div class="chart-wrap" id="chart-hdi"></div>
+    </div>
+    <div class="note"><strong>Pembaruan 2025:</strong> IPM 2025 mencapai 75,90 dan umur harapan hidup 74,47 tahun. <span class="src">BPS, rilis 5 Nov 2025.</span></div>
+  </section>
+
+  <!-- ============ PENDIDIKAN ============ -->
+  <section class="page-section" id="section-pendidikan" hidden>
+    <p class="eyebrow">Pendidikan</p>
+    <h2>Sekolah lebih lama, tapi rata-rata baru setara SMP</h2>
+    <p class="lede">Anak usia 7 tahun pada 2024 berpeluang bersekolah 13,21 tahun (setara diploma), tetapi penduduk dewasa usia 25+ rata-rata baru menempuh 8,85 tahun sekolah.</p>
+    <div class="stat-row">
+      <div class="stat"><b>13,21 thn</b><span>Harapan lama sekolah, 2024</span><span class="src">BPS, 2024</span></div>
+      <div class="stat"><b>8,85 thn</b><span>Rata-rata lama sekolah (25+), 2024</span><span class="src">BPS, 2024</span></div>
+      <div class="stat"><b>Rp12,34 jt</b><span>Pengeluaran riil per kapita per tahun, 2024</span><span class="src">BPS, 2024</span></div>
+    </div>
+    <div class="card">
+      <h3>Komponen pendidikan dalam IPM 2024</h3>
+      <p>Harapan lama sekolah naik 0,06 tahun dan rata-rata lama sekolah naik 0,08 tahun dibanding 2023. Pengeluaran riil per kapita naik 3,71% menjadi Rp12,34 juta per tahun. <span class="src">BPS, 2024.</span></p>
+      <div class="chart-wrap" id="chart-hdi-home"></div>
+      <p>Grafik: IPM Indonesia 2020–2024. <span class="src">BPS.</span></p>
+    </div>
+    <div class="note"><strong>Kemiskinan membaik:</strong> tingkat kemiskinan Maret 2025 turun ke 8,47% (23,85 juta orang) dari 8,57% (September 2024) dan 9,03% (Maret 2024). Garis kemiskinan Maret 2025: Rp609.160 per kapita per bulan; rasio gini 0,375. <span class="src">BPS Susenas.</span></p>
+    <div class="card">
+      <h3>Kemiskinan turun tiga kali berturut-turut</h3>
+      <p>Persentase penduduk miskin: 9,03% (Mar 2024) &rarr; 8,57% (Sep 2024) &rarr; 8,47% (Mar 2025). <span class="src">BPS Susenas.</span></p>
+      <div class="chart-wrap" id="chart-poverty"></div>
+    </div>
+  </section>
+
+  <!-- ============ WILAYAH ============ -->
+  <section class="page-section" id="section-wilayah" hidden>
+    <p class="eyebrow">Wilayah</p>
+    <h2>38 provinsi, satu tabel yang bisa dicari</h2>
+    <p class="lede">Sepuluh provinsi terpadat menampung lebih dari 70% penduduk Indonesia. Cari nama provinsi, filter berdasarkan pulau, atau urutkan berdasarkan jumlah penduduk.</p>
+    <div class="fact-grid" id="region-facts"></div>
+    <div class="card">
+      <h3>10 provinsi terpadat, 2024</h3>
+      <div class="controls">
+        <label for="province-search">Cari provinsi</label>
+        <input type="search" id="province-search" placeholder="cth: Jawa, Sumatera, Bali…" autocomplete="off">
+        <label for="province-island">Pulau</label>
+        <select id="province-island">
+          <option value="Semua">Semua pulau</option>
+          <option value="Jawa">Jawa</option>
+          <option value="Sumatera">Sumatera</option>
+          <option value="Sulawesi">Sulawesi</option>
+        </select>
+        <label for="province-sort">Urutkan</label>
+        <select id="province-sort">
+          <option value="pop-desc">Penduduk terbanyak dulu</option>
+          <option value="pop-asc">Penduduk tersedikit dulu</option>
+          <option value="name">Nama A–Z</option>
+          <option value="share-desc">Pangsa terbesar dulu</option>
+        </select>
+        <button class="btn" id="province-download" type="button">Unduh CSV</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>#</th><th>Provinsi</th><th>Pulau</th><th class="num">Penduduk 2024 (jt jiwa)</th><th class="num">Pangsa</th></tr>
+          </thead>
+          <tbody id="province-rows"></tbody>
+        </table>
+      </div>
+      <p class="src" id="province-count"></p>
+      <p class="src">Sumber: Badan Pusat Statistik, jumlah penduduk menurut provinsi 2024. Pangsa dihitung terhadap total penduduk 281,60 juta jiwa.</p>
+    </div>
+  </section>
+
+  <!-- ============ METODOLOGI ============ -->
+  <section class="page-section" id="section-metodologi" hidden>
+    <p class="eyebrow">Metodologi &amp; sumber</p>
+    <h2>Dari mana angka-angka ini?</h2>
+    <p class="lede">Setiap angka di situs ini berasal dari publikasi resmi. Tidak ada angka estimasi, proyeksi agen, atau angka yang diarang. Tahun dan penerbit dicantumkan di setiap bagian.</p>
+    <div class="card">
+      <h3>Sumber data</h3>
+      <ul class="source-list" id="sources-list"></ul>
+    </div>
+    <div class="card">
+      <h3>Istilah yang dipakai</h3>
+      <ul class="def-list" id="definitions-list"></ul>
+    </div>
+    <div class="card">
+      <h3>Cara situs ini dibuat</h3>
+      <p>Situs statis tanpa build step: HTML, CSS, dan JavaScript lokal. Semua grafik digambar sebagai SVG inline dari data yang sama dengan yang ditampilkan — tidak ada permintaan jaringan, tidak ada font atau pustaka eksternal, dan situs berfungsi penuh tanpa internet setelah berkasnya diunduh.</p>
+      <p>Angka dibulatkan ke dua desimal untuk keterbacaan; pangsa provinsi dihitung dari angka tabel terhadap total 281,60 juta jiwa. Bila publikasi resmi merevisi suatu angka, angka di situs ini mengikuti rilis terakhir yang dikutip di atas.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p><strong>NusaData — Statistik Indonesia.</strong> Situs peraga data nasional yang dibuat untuk kompetisi make.fun “Make the best national statistics site”. Bukan situs resmi pemerintah.</p>
+    <p>Sumber angka: Badan Pusat Statistik (BPS), Bank Indonesia, Kementerian Perdagangan (PDSI), Ditjen Dukcapil Kemendagri. Tahun dasar 2024, dengan pembaruan 2025 yang sudah dirilis. Detail lengkap di <a href="#/metodologi">Metodologi &amp; Sumber</a>.</p>
+    <p>Diperbarui 26 November 2026. Situs ini berjalan tanpa jaringan: semua berkas lokal di bawah app/.</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="charts.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
